@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyq.nongyezhongzhi.baseinfo.dao.IQuarterDataDao">
+  
+  <insert id="create">
+   insert into quarterData values (#{id},#{wheatyield},#{riceyield},#{fruitsyield},'N')
+  
+  </insert>
+  
+  <update id="update">
+   update quarterData set QuarterDataWheatYield=#{wheatyield},QuarterDataRiceYYield=#{riceyield},QuarterDataFruitsYield=#{fruitsyield},
+  
+   where QUARTERDID=#{id}
+  </update>
+  
+  <delete id="delete">
+   delete from quarterData where  QUARTERDID=#{id}
+  </delete>
+   
+  
+</mapper>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyq.nongyezhongzhi.baseinfo.dao.IRiceDao">
+  
+  <insert id="create">
+   insert into rice values (#{id},#{yeardata},#{monthlddata},#{quarterdata},'N')
+  
+  </insert>
+  
+  <update id="update">
+   update rice set RiceYearData=#{yeardata},RiceMonthldData=#{monthlddata},RiceQuarterData=#{quarterdata},
+  
+   where RICEID=#{id}
+  </update>
+  
+  <delete id="delete">
+   delete from Rice where  RICEID=#{id}
+  </delete>
+   
+  
+</mapper>

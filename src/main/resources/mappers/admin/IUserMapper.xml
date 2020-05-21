@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyq.nongyezhongzhi.admin.dao.IUserDao">
+  
+  <insert id="create">
+   insert into userinfo values (#{id},#{password},#{name},#{sex},#{age},#{tel},'N')
+  
+  </insert>
+  
+  <update id="update">
+   update userinfo set UserPassword=#{password},UserName=#{name},UserAge=#{age},UserSex=#{sex}
+  ,UserTel=#{tel}
+   where USERID=#{id}
+  </update>
+  
+  <delete id="delete">
+   delete from UserInfo where  USERID=#{id}
+  </delete>
+   
+  
+</mapper>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zyq.nongyezhongzhi.yield.dao.IFruitsYieldDao">
+  
+  <insert id="create">
+   insert into fruitsyield values (#{yeardata},#{monthlddata},#{quarterdata},'N')
+  
+  </insert>
+  
+  <update id="update">
+   update fruitsyield set FriutsYieldYearData=#{yeardata}, FriutsYieldMonthldData=#{monthlddata},FriutsYieldQuarterData=#{quarterdata},
+ 
+  
+   where FRIUTSYIELDID=#{id}
+  </update>
+  
+  <delete id="delete">
+   delete from FruitsYield where FRIUTSYIELDIDS=#{id}
+  </delete>
+   
+  
+</mapper>
